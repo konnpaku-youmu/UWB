@@ -6,6 +6,8 @@
 
 namespace uwb
 {
+    typedef boost::crc_optimal<16, 0x8005, 0xFFFF, 0, true, true> crc_modbus;
+    
     class MultiThread
     {
     private:
@@ -37,16 +39,6 @@ namespace uwb
             return (void)pthread_join(this->__thread__, NULL);
         }
     };
-
-    inline uint16_t calcCRC16(void *begin, size_t size, uint16_t poly = 0x8005)
-    {
-        char *buffer = (char *)malloc(size + sizeof(uint16_t));
-        memcpy(buffer, begin, size);
-
-        
-
-        return 0;
-    }
 }
 
 #endif

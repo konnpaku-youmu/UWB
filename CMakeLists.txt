@@ -4,6 +4,7 @@ add_compile_options(--std=c++17)
 
 find_package(Boost 1.72 REQUIRED)
 find_package(OpenMP)
+find_package(yaml-cpp REQUIRED)
 
 include_directories(
     include
@@ -18,4 +19,5 @@ target_link_libraries(${PROJECT_NAME}
     -lpthread 
     -pthread
     OpenMP::OpenMP_CXX
+    yaml-cpp
 )

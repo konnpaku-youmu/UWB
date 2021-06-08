@@ -1,0 +1,46 @@
+dev-name: "/dev/ttyUSB0"
+modbus-id: 1
+ranging-mode: 1
+device-mode: 2
+station-id: 0
+base-station-pos:
+  - x: 0
+  - y: 0
+  - z: 0
+station-b-pos:
+  - enable: 1
+  - x: 0
+  - y: 0
+  - z: 0
+station-c-pos:
+  - enable: 1
+  - x: 0
+  - y: 0
+  - z: 0
+station-d-pos:
+  - enable: 0
+  - x: 0
+  - y: 0
+  - z: 0
+station-e-pos:
+  - enable: 0
+  - x: 0
+  - y: 0
+  - z: 0
+station-f-pos:
+  - enable: 0
+  - x: 0
+  - y: 0
+  - z: 0
+station-g-pos:
+  - enable: 0
+  - x: 0
+  - y: 0
+  - z: 0
+station-h-pos:
+  - enable: 0
+  - x: 0
+  - y: 0
+  - z: 0
+loc-en: 4
+tag-num: 1

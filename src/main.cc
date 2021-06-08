@@ -5,6 +5,8 @@
 
 int main(int argc, char const *argv[])
 {
+    std::string config_path = "../cfg/config.yaml";
+
     pthread_attr_t attr;
 
     pthread_attr_init(&attr);
@@ -12,6 +14,8 @@ int main(int argc, char const *argv[])
 
     std::mutex *mut = new std::mutex();
     uwb::BaseStationComm base_station(mut);
+
+    base_station.loadConfigFile(config_path);
 
     base_station.configure();
 
