@@ -4,10 +4,12 @@
 #include <pthread.h>
 #include <mutex>
 
+#include <eigen3/Eigen/Eigen>
+
 namespace uwb
 {
     typedef boost::crc_optimal<16, 0x8005, 0xFFFF, 0, true, true> crc_modbus;
-    
+
     class MultiThread
     {
     private:

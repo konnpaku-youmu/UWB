@@ -13,13 +13,13 @@ int main(int argc, char const *argv[])
     pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
 
     std::mutex *mut = new std::mutex();
-    uwb::BaseStationComm base_station(mut);
-
-    base_station.loadConfigFile(config_path);
+    uwb::BaseStationComm base_station(mut, config_path);
 
     base_station.configure();
 
-    // base_station.startThread(attr);
+    base_station.startThread(attr);
+
+    while (1);
 
     return 0;
 }
